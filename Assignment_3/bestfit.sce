@@ -1,14 +1,19 @@
-clear; 
-clc;
+clear;clc;
+n = input('Enter the number of equations:')
 
-a = input("Enter a matrix A: ");
-disp(a, 'A:');
+for i=1:n
+    for j=1:2
+        a(i,j) = input("Enter the values:") 
+    end
+end
+disp(a)
 
-b = input("Enter a matrix b: ");
-disp(b,'b:');
-
+for i=1:n
+    b(i) = input("Enter the values:")
+end
+disp(b)
 x=(a'*a)\(a'*b)
-disp(x,'x=1');
+disp(x,'x=');
 
 C=x(1,1);
 D=x(2,1);
